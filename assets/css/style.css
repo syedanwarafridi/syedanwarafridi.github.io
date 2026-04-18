@@ -1521,6 +1521,7 @@ a.contact-value:hover { color: var(--white); }
 /* Sections need position:relative for the orb pseudo-elements */
 .about, .experience, .skills, .projects, .contact {
   position: relative;
+  overflow: hidden;
 }
 
 /* ── Orb glows behind each section ── */
