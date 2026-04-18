@@ -468,3 +468,19 @@ function loadPipelines() {
       pipelineSection.innerHTML = '<div class="container"><p style="color: var(--muted); text-align: center; padding: 2rem;">⚠️ Pipelines content coming soon. Check back later!</p></div>';
     });
 }
+
+/* ================================================================
+   MOUSE-FOLLOWING GRADIENT EFFECT
+================================================================ */
+const gradientSections = document.querySelectorAll('.about, .experience, .skills, .projects, .contact, .pipelines-wrapper');
+
+gradientSections.forEach(section => {
+  section.addEventListener('mousemove', (e) => {
+    const rect = section.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    
+    section.style.setProperty('--mouse-x', `${x}%`);
+    section.style.setProperty('--mouse-y', `${y}%`);
+  });
+});

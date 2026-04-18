@@ -1935,3 +1935,132 @@ body::after {
     min-width: auto;
   }
 }
+
+
+/* ================================================================
+   SUBTLE SECTION HOVER EFFECTS
+================================================================ */
+
+.about, 
+.experience, 
+.skills, 
+.projects, 
+.contact,
+.pipelines-wrapper {
+  transition: all 0.4s ease;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Create overlay */
+.about::after,
+.experience::after,
+.skills::after,
+.projects::after,
+.contact::after,
+.pipelines-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(168, 85, 247, 0.08) 0%,
+    rgba(79, 70, 229, 0.05) 50%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Show gradient on hover */
+.about:hover::after,
+.experience:hover::after,
+.skills:hover::after,
+.projects:hover::after,
+.contact:hover::after,
+.pipelines-wrapper:hover::after {
+  opacity: 1;
+}
+
+/* Optional: Add glow to section borders */
+.about:hover,
+.experience:hover,
+.skills:hover,
+.projects:hover,
+.contact:hover,
+.pipelines-wrapper:hover {
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.1);
+  border-color: rgba(168, 85, 247, 0.2);
+}
+
+/* ================================================================
+   MOUSE-FOLLOWING GRADIENT EFFECT - CSS
+================================================================ */
+
+/* Mouse-following gradient for sections */
+.about,
+.experience,
+.skills,
+.projects,
+.contact,
+.pipelines-wrapper {
+  position: relative;
+  transition: all 0.3s ease;
+  isolation: isolate;
+}
+
+.about::before,
+.experience::before,
+.skills::before,
+.projects::before,
+.contact::before,
+.pipelines-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(168, 85, 247, 0.15) 0%,
+    rgba(79, 70, 229, 0.08) 40%,
+    rgba(59, 130, 246, 0.04) 70%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Show gradient on hover */
+.about:hover::before,
+.experience:hover::before,
+.skills:hover::before,
+.projects:hover::before,
+.contact:hover::before,
+.pipelines-wrapper:hover::before {
+  opacity: 1;
+}
+
+/* Ensure content stays above gradient */
+.about > *,
+.experience > *,
+.skills > *,
+.projects > *,
+.contact > *,
+.pipelines-wrapper > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Optional: Add a subtle border glow on hover */
+.about:hover,
+.experience:hover,
+.skills:hover,
+.projects:hover,
+.contact:hover,
+.pipelines-wrapper:hover {
+  border-color: rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.08);
+}
