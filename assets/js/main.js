@@ -397,6 +397,17 @@ if (form) {
   });
 }
 /* ================================================================
+   THUMBNAIL FADE-IN ON LOAD
+================================================================ */
+document.querySelectorAll('.thumb-img[src]').forEach(img => {
+  if (img.complete && img.naturalWidth) {
+    img.classList.add('loaded');
+  } else {
+    img.addEventListener('load', () => img.classList.add('loaded'));
+  }
+});
+
+/* ================================================================
    TOAST
 ================================================================ */
 function showToast(message) {
@@ -428,39 +439,6 @@ function showToast(message) {
   setTimeout(() => toast.remove(), 4000);
 }
 
-// Dynamic website screenshots using Microlink API (Free)
-(function initDynamicScreenshots() {
-  // Function to process a single thumbnail
-  async function processThumbnail(thumbnail, imgSelector) {
-    const img = thumbnail.querySelector(imgSelector);
-    const liveLink = thumbnail.querySelector('.overlay-live-btn')?.href;
-    
-    if (!img || !liveLink) return;
-    
-    try {
-      const response = await fetch(`https://api.microlink.io/?url=${encodeURIComponent(liveLink)}&screenshot=true`);
-      const data = await response.json();
-      
-      if (data.data?.screenshot?.url) {
-        img.src = data.data.screenshot.url;
-        img.style.display = 'block';
-        
-        const placeholder = thumbnail.querySelector('.thumb-placeholder');
-        if (placeholder) placeholder.style.display = 'none';
-      }
-    } catch (err) {
-      console.log('Screenshot failed for:', liveLink);
-    }
-  }
-  
-  // Process Featured Projects
-  const featuredThumbnails = document.querySelectorAll('.featured-card .project-thumbnail');
-  featuredThumbnails.forEach(thumbnail => processThumbnail(thumbnail, '.thumb-img'));
-  
-  // Process Other Projects (the grid cards)
-  const otherThumbnails = document.querySelectorAll('.other-card .other-thumbnail');
-  otherThumbnails.forEach(thumbnail => processThumbnail(thumbnail, '.thumb-img'));
-})();
 
 
 
