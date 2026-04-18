@@ -1522,35 +1522,6 @@ a.contact-value:hover { color: var(--white); }
 .about, .experience, .skills, .projects, .contact {
   position: relative;
   overflow: hidden;
-  transition: background-color 0.6s ease;
-}
-
-/* Hover gradient overlay — fades in on section hover */
-.about::after,
-.experience::before,
-.skills::before,
-.projects::before,
-.contact::after {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: radial-gradient(
-    ellipse at 60% 40%,
-    rgba(88, 28, 135, 0.18) 0%,
-    rgba(37, 99, 235, 0.10) 45%,
-    transparent 75%
-  );
-  opacity: 0;
-  transition: opacity 0.65s ease;
-  pointer-events: none;
-  z-index: 0;
-}
-.about:hover::after,
-.experience:hover::before,
-.skills:hover::before,
-.projects:hover::before,
-.contact:hover::after {
-  opacity: 1;
 }
 
 /* ── Orb glows behind each section ── */
