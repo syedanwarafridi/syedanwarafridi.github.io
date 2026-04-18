@@ -28,7 +28,7 @@
   --shadow-lg:0 12px 48px rgba(0,0,0,0.6);
 }
 
-html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
   font-family: var(--font);
@@ -38,7 +38,6 @@ body {
   color: var(--text);
   line-height: 1.65;
   overflow-x: hidden;
-  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -172,7 +171,6 @@ button { font-family: inherit; }
   top: 0;
   left: 0;
   right: 0;
-  width: 100%;
   z-index: 1000;
   display: flex;
   align-items: center;
