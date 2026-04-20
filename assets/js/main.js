@@ -193,13 +193,9 @@ function closeMobileMenu() {
 /* ================================================================
    TYPING ANIMATION
 ================================================================ */
-const roles = [
-  'Senior Data Scientist',
-  'AI / ML Engineer',
-  'Deep Learning Specialist',
-  'AI Agents & RAG Architect',
-  'Computer Vision Engineer',
-];
+const roles = (typeof PORTFOLIO !== 'undefined')
+  ? PORTFOLIO.hero.roles
+  : ['Senior Data Scientist', 'AI / ML Engineer', 'Deep Learning Specialist', 'AI Agents & RAG Architect', 'Computer Vision Engineer'];
 
 let roleIdx  = 0;
 let charIdx  = 0;
