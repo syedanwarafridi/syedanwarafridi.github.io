@@ -74,6 +74,16 @@ const PORTFOLIO = {
     },
     {
       role:     'Senior Data Scientist',
+      company:  'Appedology',
+      period:   'July 2025 – Present',
+      location: 'Islamabad, PK',
+      badge:    'Current',
+      active:   true,
+      bullets: [],
+      stack: [],
+    },
+    {
+      role:     'Senior Data Scientist',
       company:  'Alpha Squad',
       period:   'February 2025 – Present',
       location: 'Islamabad, PK',

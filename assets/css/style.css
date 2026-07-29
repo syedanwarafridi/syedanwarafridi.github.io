@@ -1604,7 +1604,6 @@ body::after {
 /* ── Tablet (≤1024px) ── */
 @media (max-width: 1024px) {
   .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .about-photo-wrap { display: none; }
   .skills-wall { grid-template-columns: repeat(auto-fill, minmax(95px, 1fr)); }
   .featured-card { grid-template-columns: 1fr; gap: 2rem; }
   .featured-card--reverse { direction: ltr; }
