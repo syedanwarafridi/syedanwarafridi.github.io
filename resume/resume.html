@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Syed Anwar — Resume</title>
+<style>
+  :root {
+    --text: #1a1a1a;
+    --muted: #4a4a4a;
+    --rule: #1a1a1a;
+    --accent: #1d4e89;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Calibri, Arial, "Segoe UI", Helvetica, sans-serif;
+    color: var(--text);
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 44px 48px 64px;
+    line-height: 1.5;
+    font-size: 14.5px;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 {
+    font-size: 29px;
+    margin: 0 0 3px;
+    letter-spacing: -0.015em;
+    font-weight: 800;
+  }
+  .title {
+    font-size: 15.5px;
+    color: var(--accent);
+    margin: 0 0 12px;
+    font-weight: 600;
+  }
+  .contact {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 26px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+  .contact span { white-space: nowrap; display: flex; align-items: center; }
+  .contact span:not(:last-child)::after {
+    content: "\2022";
+    color: #b0b0b0;
+    margin: 0 10px;
+    font-weight: 700;
+  }
+  .contact a { color: var(--muted); }
+  .contact a:hover { color: var(--accent); }
+  h2 {
+    font-size: 13.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+    border-bottom: 1.5px solid var(--accent);
+    padding-bottom: 5px;
+    margin: 28px 0 13px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p.summary { margin: 0 0 4px; text-align: justify; }
+  .entry { margin-bottom: 17px; }
+  .entry:last-child { margin-bottom: 0; }
+  .entry-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .role { font-weight: 700; font-size: 14.5px; }
+  .period { font-size: 13px; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  .org-line {
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    color: var(--muted);
+    font-size: 13.5px;
+    margin-bottom: 5px;
+  }
+  .entry-intro { margin: 2px 0 6px; }
+  ul { margin: 5px 0 0; padding-left: 19px; }
+  li { margin-bottom: 5px; }
+  li::marker { color: var(--accent); }
+  .skills-block { margin-bottom: 10px; line-height: 1.55; }
+  .skills-block:last-child { margin-bottom: 0; }
+  .skills-label { font-weight: 700; color: var(--text); }
+  .proj-title { font-weight: 700; font-size: 14.5px; }
+  .proj-stack { font-style: italic; color: var(--muted); font-size: 13px; margin: 1px 0 4px; }
+  .edu-degree { font-weight: 700; }
+  .edu-meta { color: var(--muted); font-size: 13.5px; }
+
+  .print-btn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  }
+  .print-btn:hover { opacity: 0.9; }
+  @media print {
+    .print-btn { display: none; }
+    body { padding: 0; max-width: 100%; }
+  }
+  @page { size: Letter; margin: 0.55in; }
+</style>
+</head>
+<body>
+
+<button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
+
+<h1>Syed Anwar</h1>
+<p class="title">Senior Data Scientist &amp; AI/ML Engineer</p>
+<p class="contact">
+  <span>Islamabad, Pakistan</span>
+  <span><a href="tel:+923344546885">+92 334 454 6885</a></span>
+  <span><a href="mailto:syedanwarafridi00@gmail.com">syedanwarafridi00@gmail.com</a></span>
+  <span><a href="https://syedanwarafridi.github.io/" target="_blank" rel="noopener">syedanwarafridi.github.io</a></span>
+  <span><a href="https://www.linkedin.com/in/syed-anwar-715a411aa/" target="_blank" rel="noopener">linkedin.com/in/syed-anwar-715a411aa</a></span>
+  <span><a href="https://github.com/syedanwarafridi" target="_blank" rel="noopener">github.com/syedanwarafridi</a></span>
+  <span><a href="https://www.kaggle.com/syedanwarafridi" target="_blank" rel="noopener">kaggle.com/syedanwarafridi</a></span>
+</p>
+
+<h2>Profile</h2>
+<p class="summary">Senior Data Scientist &amp; AI/ML Engineer with 6+ years of experience designing, training, and deploying production Machine Learning, Deep Learning, and Generative AI systems. Specialized in Large Language Models (LLMs), Retrieval-Augmented Generation (RAG), Computer Vision, and multi-agent AI architectures — from training Transformer models from scratch to fine-tuning LLMs and shipping systems that scale. Delivered 50+ AI/ML projects for clients across the USA, UK, Middle East, and Europe.</p>
+
+<h2>Professional Experience</h2>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Senior Data Scientist</span>
+    <span class="period">Jul 2025 – Present</span>
+  </div>
+  <div class="org-line"><span>Appedology</span><span>Islamabad, Pakistan</span></div>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Lead Data Scientist</span>
+    <span class="period">Feb 2025 – Jul 2025</span>
+  </div>
+  <div class="org-line"><span>Alpha Squad</span><span>Islamabad, Pakistan</span></div>
+  <ul>
+    <li>Built and fine-tuned a persona-driven crypto Twitter agent (Mind of Pepe) by scraping and cleaning tweets from the Aixbt agent and adapting a LLaMA model to mimic its style, achieving 98% signal accuracy and viral engagement.</li>
+    <li>Shipped a gated terminal integrating AI-based signal generation, crypto sentiment analysis, and technical analysis using real-time CoinMarketCap data, delivering actionable insights to meme coin traders.</li>
+    <li>Integrated a Retrieval-Augmented Generation (RAG) system with the agent and terminal, enabling contextual understanding by pulling live crypto data and user behavior patterns.</li>
+    <li>Built a full AI-powered receptionist system using n8n, Telnyx, and ElevenLabs for Jumper Media, enabling intelligent call handling, event scheduling, follow-ups, and outbound calls.</li>
+    <li>Integrated real-time speech-to-text transcription and RAG with webhook-driven context from customer emails and call logs, improving personalization and relevance.</li>
+    <li>Optimized system performance, reducing response latency to 850ms for a seamless, human-like user experience.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Data Scientist</span>
+    <span class="period">Aug 2024 – Feb 2025</span>
+  </div>
+  <div class="org-line"><span>MetaViz Pro</span><span>Lahore, Pakistan</span></div>
+  <p class="entry-intro">Delivered Computer Vision, Deep Learning, and Natural Language Processing (NLP) systems, including engineering Transformers, Large Language Models (LLMs), and AI agents from scratch; leveraged Data Science to solve business problems.</p>
+  <ul>
+    <li>Trained two Transformer-based models from scratch using GPT-NeoX and PyTorch: a 5M-parameter text generation model (74% accuracy) and a 19M-parameter Python/Java code completion model (67% accuracy).</li>
+    <li>Built a real-time yoga pose estimation system using computer vision, comparing extracted pose features against a reference database and providing corrective feedback.</li>
+    <li>Engineered a facial recognition attendance system with PPE compliance monitoring, triggering alerts and identifying non-compliant workers in real time.</li>
+    <li>Optimized a Convolutional Neural Network (CNN) for brain tumor detection, achieving 98% accuracy with a 5-layer architecture — matching EfficientNet-level performance with a far more compact model.</li>
+    <li>Built an AI agent system in LangGraph to score AI job-replacement risk, perform skills gap analysis, and recommend career pathways.</li>
+    <li>Managed and cleaned complex financial data, engineered machine learning models for insights, and analyzed trends to support strategic financial decisions.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Data Scientist</span>
+    <span class="period">Sep 2023 – Aug 2024</span>
+  </div>
+  <div class="org-line"><span>JMM Technologies</span><span>Peshawar, Pakistan</span></div>
+  <p class="entry-intro">Created Computer Vision, Deep Learning, and NLP chatbot systems using Large Language Models (LLMs); employed Data Science to solve business problems.</p>
+  <ul>
+    <li>Engineered an AI web app using GPT-4o to detect translation errors across Spanish, French, and Arabic documents against English source text, improving accuracy from 50% to 90% through advanced prompt engineering and reducing costs 40% via token management and Python regex.</li>
+    <li>Led a US company's end-to-end system deploying regression algorithms for football score predictions, including cleansing data from a third-party API for optimal input quality.</li>
+    <li>Built an AI system for generating custom LLM-based knowledge assistants from YouTube videos, PDFs, and website content using the OpenAI Assistant API, LangChain for video transcription, and web scraping — enabling RAG systems and code interpreters.</li>
+    <li>Fine-tuned YOLOv8 and YOLOv5 for an American Sign Language detection system (MVP stage) for Saudi Airport Assistance, achieving high detection accuracy while resolving FPS lag.</li>
+    <li>Built an advanced RAG application using Query Expansion and Cross-Encoder Re-ranking, improving retrieval accuracy.</li>
+    <li>Used BeautifulSoup, Selenium, and Octoparse for large-scale web scraping of real-time data from authorized sources.</li>
+    <li>Utilized time series modeling (ARIMA, SARIMA, Facebook Prophet) to forecast temperature and inflation trends.</li>
+    <li>Deployed ML pipelines on AWS (EC2, Lambda, S3, Cloud9) for scalable data storage and transformation.</li>
+    <li>Built sales dashboards in Power BI, turning complex datasets into actionable insights for decision-making.</li>
+    <li>Delivered data cleaning and analysis for an e-recycling company project, generating actionable business insights.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Machine Learning Engineer Associate</span>
+    <span class="period">Nov 2022 – May 2023</span>
+  </div>
+  <div class="org-line"><span>Government Innovation Lab &mdash; UNDP</span><span>Quetta, Pakistan</span></div>
+  <ul>
+    <li>Led a 3-person team (including 1 junior team member) in developing a facial-recognition-based Smart Attendance System achieving 94% accuracy, replacing the department's manual fingerprint-based attendance process.</li>
+    <li>Contributed to a Smart Vehicle Counting system using machine learning algorithms for precise, automated vehicle counting.</li>
+    <li>Collaborated with cross-functional teams as ICT Developer Fellow, integrating emerging technologies into government infrastructure.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Data Science Intern</span>
+    <span class="period">Jun 2022 – Jul 2022</span>
+  </div>
+  <div class="org-line"><span>British Airways</span><span>Remote / Quetta, Pakistan</span></div>
+  <ul>
+    <li>Analyzed a dataset of 20,000+ booking records to identify patterns behind a 27% ticket cancellation rate, informing targeted mitigation strategies.</li>
+    <li>Designed predictive models using machine learning algorithms to optimize operational performance and forecast trends.</li>
+    <li>Translated complex data findings into actionable insights and recommendations, contributing to improved profit margins and operational efficiency.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">Research Assistant</span>
+    <span class="period">Jan 2021 – Dec 2021</span>
+  </div>
+  <div class="org-line"><span>University of Balochistan &mdash; CS Department</span><span>Quetta, Pakistan</span></div>
+  <ul>
+    <li>Trained and evaluated a Gender Prediction model achieving 99% accuracy under PhD supervision as part of an academic research initiative.</li>
+    <li>Implemented and compared four detection models (Faster R-CNN, R-CNN, SSD, YOLOv8) for license plate recognition, achieving up to 86% accuracy and contributing to an academic publication.</li>
+  </ul>
+</div>
+
+<h2>Skills</h2>
+
+<div class="skills-block"><span class="skills-label">Core Competencies:</span> Machine Learning, Deep Learning, Large Language Models (LLMs), Generative AI, Retrieval-Augmented Generation (RAG), Computer Vision, Natural Language Processing (NLP), AI Agents, MLOps</div>
+<div class="skills-block"><span class="skills-label">Programming Languages:</span> Python, C++, JavaScript, SQL, MySQL, PostgreSQL</div>
+<div class="skills-block"><span class="skills-label">ML / DL Frameworks &amp; Libraries:</span> TensorFlow, PyTorch, Keras, Scikit-Learn, Ultralytics (YOLO), OpenCV, Pillow, Pandas, NumPy, Transformers, LangChain, LangGraph, CrewAI, LlamaIndex, HuggingFace, Pydantic, NLTK, PySpark</div>
+<div class="skills-block"><span class="skills-label">Web &amp; API Frameworks:</span> Django, FastAPI, Flask, Streamlit, Gradio, Dash, HTML, CSS</div>
+<div class="skills-block"><span class="skills-label">Cloud &amp; DevOps:</span> AWS (EC2, Lambda, S3, Kinesis), Azure (OpenAI, AI Search, Document Intelligence, App Services, Container Apps, Function Apps), Google Cloud Platform, IBM Cloud, DigitalOcean, Docker, Kubernetes, GitHub Actions, CI/CD, Airflow</div>
+<div class="skills-block"><span class="skills-label">MLOps &amp; Data Tools:</span> MLflow, Weights &amp; Biases, DVC, dbt, Snowflake, Git</div>
+<div class="skills-block"><span class="skills-label">Visualization &amp; BI:</span> Matplotlib, Seaborn, Plotly, Power BI</div>
+<div class="skills-block"><span class="skills-label">Automation &amp; Web Scraping:</span> Selenium, BeautifulSoup, Octoparse</div>
+<div class="skills-block"><span class="skills-label">Hardware &amp; IoT:</span> NVIDIA Jetson Nano, Raspberry Pi, Arduino, OpenCV OAK-D</div>
+
+<h2>Projects</h2>
+
+<div class="entry">
+  <div class="proj-title">Transformers From Scratch</div>
+  <div class="proj-stack">Python, GPT-NeoX, CodeXGLUE, PyTorch</div>
+  <ul>
+    <li>Constructed a Transformer-based text generation model (5M parameters) using GPT-NeoX and PyTorch, achieving 74% accuracy in generating contextually relevant text.</li>
+    <li>Created a Transformer-based code completion model for Python and Java (19M parameters), achieving 67% accuracy.</li>
+    <li>Fine-tuned and evaluated both models on task-specific datasets, achieving strong performance with compact architectures.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="proj-title">ProofLingo</div>
+  <div class="proj-stack">OpenAI, LangChain</div>
+  <ul>
+    <li>Built an AI system to detect contextual, missing, consistency, and translation errors by comparing source and target language documents using GPT-4, achieving over 90% accuracy.</li>
+    <li>Reduced system costs by 40% through token management and prompt engineering.</li>
+    <li>Created AI tools for text formatting, bilingual document queries, tone adaptation, and rephrasing; collaborated with the backend team to build RESTful APIs for CRUD operations.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="proj-title">Sign Language Detection</div>
+  <div class="proj-stack">TensorFlow, Keras, OpenCV, Ultralytics, OAK-D</div>
+  <ul>
+    <li>Fine-tuned YOLOv8, LSTM, and CNN1D models for sign language detection as part of a Saudi government initiative.</li>
+    <li>Integrated the models with ChatGPT to enhance language processing capabilities.</li>
+    <li>Combined computer vision and language understanding technologies to deliver an effective sign language detection system.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="proj-title">Smart Attendance System</div>
+  <div class="proj-stack">Scikit-Learn, OpenCV, NumPy, Flask, HTML, CSS, Ajax</div>
+  <ul>
+    <li>Built a facial recognition-based attendance system using SVM and KNN models for accurate individual recognition.</li>
+    <li>Deployed the system within the Planning and Development Department, improving operational efficiency and security.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="proj-title">Smart Vehicle Counting System</div>
+  <div class="proj-stack">OpenCV, LabelImg, Jetson Nano</div>
+  <ul>
+    <li>Collected, annotated, and cleaned vehicle image data to build a robust training dataset.</li>
+    <li>Optimized a YOLOv8 model on vehicle data, improving object detection accuracy.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="proj-title">Self-Driving Car</div>
+  <div class="proj-stack">Raspberry Pi, Arduino, OpenCV</div>
+  <ul>
+    <li>Built a self-driving vehicle prototype (Final Year Project) integrating IoT and AI technologies for autonomous navigation.</li>
+  </ul>
+</div>
+
+<div class="entry">
+  <div class="proj-title">License Plate Detection</div>
+  <div class="proj-stack">Python, TensorFlow, OpenCV, Keras, NumPy</div>
+  <ul>
+    <li>Implemented license plate detection under PhD supervision as part of an academic research project.</li>
+    <li>Evaluated four detection models (Faster R-CNN, R-CNN, SSD, YOLOv8) for license plate recognition performance.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="entry">
+  <div class="entry-head">
+    <span class="edu-degree">Bachelor's in Computer Science</span>
+    <span class="period">Aug 2018 – Dec 2022</span>
+  </div>
+  <div class="org-line"><span>University of Balochistan</span><span>Quetta, Pakistan</span></div>
+  <div class="edu-meta">CGPA: 3.36 / 4.00</div>
+</div>
+
+<h2>Awards</h2>
+<div class="entry">
+  <div class="entry-head">
+    <span class="role">IEEE Workshop</span>
+  </div>
+  <div class="org-line"><span>IEEE</span></div>
+  <p class="entry-intro">University training program awarded by IEEE; received a certificate and a complimentary IEEE publication account.</p>
+</div>
+
+</body>
+</html>
