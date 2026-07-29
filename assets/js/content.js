@@ -88,7 +88,7 @@ const PORTFOLIO = {
       period:   'February 2025 – Present',
       location: 'Islamabad, PK',
       badge:    'Current',
-      active:   true,
+      active:   false,
       bullets: [
         'Built and fine-tuned a persona-driven crypto Twitter agent (Mind of Pepe) by scraping tweets from Aixbt agent and training a LLaMA model to mimic its style — achieving **98% signal accuracy** and viral engagement.',
         'Developed a gated terminal integrating AI signal generation, crypto sentiment analysis, and technical analysis using real-time CoinMarketCap data for meme coin traders.',
@@ -104,7 +104,7 @@ const PORTFOLIO = {
       period:   'August 2024 – February 2025',
       location: 'Lahore, PK',
       badge:    'Current',
-      active:   true,
+      active:   false,
       bullets: [
         'Trained two Transformer-based models from scratch: text generation (5M params, **74% accuracy**) and code completion for Python & Java (19M params, **67% accuracy**) using GPT-NeoX and PyTorch.',
         'Built a real-time yoga pose estimation system that compares extracted pose features against a reference database and provides corrective feedback.',

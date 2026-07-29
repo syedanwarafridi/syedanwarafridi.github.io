@@ -93,7 +93,7 @@ function renderAbout() {
         ${d.bio.map(p => `<p class="about-para reveal">${md(p)}</p>`).join('')}
         <div class="about-details reveal">${detailRows}</div>
         <div class="about-actions reveal">
-          <a href="resume/Syed-Anwar-Updated.pdf" class="btn btn-primary" download="Syed-Anwar-Resume.pdf">
+          <a href="resume/Syed_Anwar.pdf" class="btn btn-primary" download="Syed-Anwar-Resume.pdf">
             ${ICON_DL} Download CV
           </a>
           <a href="#contact" class="btn btn-ghost">Get in touch &rarr;</a>
